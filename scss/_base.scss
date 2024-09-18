@@ -1,0 +1,135 @@
+// GLOBAL RESET
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    9deg,
+    $color-primary-dark 0%,
+    $color-primary-light 56%
+  );
+}
+
+// MAIN CONTAINER
+.items-container {
+  width: 80%;
+}
+
+// REQUESTING BUTTONS CONTAINER
+.request-btn {
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem 1rem;
+  gap: 2rem;
+}
+
+// JAVASCRIPT GENERATED ITEM CONTAINER
+.requested-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// GENERATED ITEM CONTAINER
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: $color-secondary;
+  width: 50%;
+  min-height: 40rem;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+  box-shadow: $shadow-far;
+
+  // ITEM DISPLAY
+  &-display {
+    font: {
+      size: $fs-big;
+      family: $ff-number;
+      color: $color-text-dark;
+    }
+    text-align: center;
+    align-content: center;
+    width: 80%;
+    min-height: 20rem;
+    background-color: white;
+    border-radius: 5px;
+    // border: 2px inset;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    margin: 4rem;
+  }
+
+  // ITEM CONTROL BUTTONS
+  &-ctrl {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 4rem;
+    gap: 2rem;
+
+    .first-btn {
+      width: 10rem;
+      background-color: #99c21e;
+      font: {
+        size: $fs-small;
+        family: $ff-text;
+        padding: 0.3rem 0.5rem;
+      }
+    }
+
+    .first-btn:hover {
+      background-color: lighten($color-green, 1%);
+    }
+
+    .second-btn {
+      width: 10rem;
+      background-color: #f17455;
+
+      font: {
+        size: $fs-small;
+        family: $ff-text;
+        padding: 0.3rem 0.5rem;
+      }
+    }
+
+    .second-btn:hover {
+      background-color: lighten($color-red, 3%);
+    }
+
+    .reset-btn {
+      width: 10rem;
+      background-color: #b4c2d0;
+      font: {
+        size: $fs-small;
+        family: $ff-text;
+        text-align: center;
+      }
+    }
+
+    .reset-btn:hover {
+      background-color: lighten($color-grey, 3%);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// REUSABLE CLASSES
+.btn {
+  font: {
+    size: $fs-medium;
+  }
+  color: $color-text-dark;
+
+  font-weight: 600;
+  background-color: $color-secondary;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: 5px;
+  transition: all 0.2s;
+  box-shadow: $shadow-close;
+  cursor: pointer;
+  backface-visibility: hidden;
+}
+.btn:hover {
+  background-color: lighten($color-text-light, 10%);
+  transform: translateY(-0.1rem);
+  box-shadow: $shadow-far;
+}
+
+.btn:active {
+  transform: translateY(0.2rem);
+  box-shadow: $shadow-close;
+}
+
+// HELPER CLASSES
+.scale:hover {
+  scale: 106%;
+}
