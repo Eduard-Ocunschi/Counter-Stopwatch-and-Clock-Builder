@@ -2,7 +2,7 @@
 export class BaseComponent {
   constructor() {
     this.container = document.createElement("div");
-    this.container.className = "container";
+    this.container.className = "container animation-faze-in";
     this.display = document.createElement("div");
     this.display.className = "container-display";
     this.ctrl = document.createElement("div");
@@ -136,10 +136,10 @@ export class DigitalClock extends BaseComponent {
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
-    let displayedInfo = `${hours < 10 ? "0" + hours : hours}:${
+    this.displayedInfo = `${hours < 10 ? "0" + hours : hours}:${
       minutes < 10 ? "0" + minutes : minutes
     }:${seconds < 10 ? "0" + seconds : seconds}`;
-    this.display.innerText = displayedInfo;
+    this.display.innerText = this.displayedInfo;
   }
 
   // CLOCK
@@ -149,12 +149,3 @@ export class DigitalClock extends BaseComponent {
     setInterval(() => this.updateClock(), 1000);
   }
 }
-
-// Test Data
-const box = document.querySelector(".requested-item");
-const builder = new EpochPlus();
-const clockBuilder = new DigitalClock();
-// builder.build(box);
-// builder.buildCounter(box);
-// builder.buildStopwatch(box);
-clockBuilder.buildClock(box);

@@ -15,6 +15,7 @@
   cursor: pointer;
   backface-visibility: hidden;
 }
+
 .btn:hover {
   background-color: lighten($color-text-light, 10%);
   transform: translateY(-0.1rem);
